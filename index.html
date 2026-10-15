@@ -827,6 +827,22 @@
   @container (min-width: 1000px) {
     .pmx-phases { grid-template-columns:repeat(4,minmax(0,1fr)); }
   }
+
+  /* ===== secciones apiladas: título arriba, contenido debajo ===== */
+  .nz .nz-sec { grid-template-columns:1fr !important; gap:clamp(18px,2.6cqi,28px) !important; align-items:start !important; }
+  .nz .nz-aside { position:static !important; }
+  .nz .nz-text { max-width:none !important; }
+  .nz .nz-title, .nz .nz-text h3 { text-wrap:wrap !important; }
+  .win-body .nz .nz-lead, .win-body .nz .nz-text p { text-align:justify !important; hyphens:auto; -webkit-hyphens:auto; text-wrap:wrap !important; max-width:none !important; }
+  .win-body .nz .nz-text p + p { margin-top:12px; }
+  .win-body .nz .nz-text p.nz-win { margin-top:16px; }
+  .win-body .nz .nz-text p.pmx-link { text-align:left !important; }
+  .nz .pm-principles { grid-template-columns:1fr; }
+  @container (min-width: 520px) { .nz .pm-principles { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @container (min-width: 1000px) { .nz .pm-principles { grid-template-columns:repeat(4,minmax(0,1fr)); } }
+  .nz .nz-tools3 { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  @container (min-width: 640px) { .nz .nz-tools3 { grid-template-columns:repeat(4,minmax(0,1fr)) !important; } }
+  @container (max-width: 380px) { .nz .nz-tools3 { grid-template-columns:1fr !important; } }
 </style>
 
 <div class="desktop" id="desktop">
@@ -1211,7 +1227,7 @@
             <div class="nz-text">
               <span class="nz-num">01 · Proceso</span>
               <h3>Design Thinking en cuatro fases</h3>
-              <p>Abrir para entender el problema, cerrar en una propuesta y validarla con usuarios.</p>
+              <p>Primero abrí el problema para entenderlo a fondo; después lo cerré en una propuesta concreta y la validé con usuarios.</p>
             </div>
             <div class="nz-main">
               <div class="pm-scroll">
@@ -1242,7 +1258,7 @@
             <div class="nz-text nz-aside">
               <span class="nz-num">02 · Investigación</span>
               <h3>El problema no es la agenda, es la barrera social</h3>
-              <p>Cuestionario con más de 50 respuestas, entrevistas y análisis de la competencia.</p>
+              <p>Cuestionario con más de 50 respuestas, entrevistas en profundidad y análisis de la competencia.</p>
             </div>
             <div class="nz-main">
               <p class="nz-sub">Cuestionario · 50+ respuestas</p>
@@ -1310,7 +1326,7 @@
             <div class="nz-text nz-aside">
               <span class="nz-num">03 · UX</span>
               <h3>De cada problema, una función</h3>
-              <p>Convertí los dolores detectados en funciones concretas, las prioricé y ordené la arquitectura de la app.</p>
+              <p>Convertí cada problema detectado en una función concreta, prioricé esas funciones y ordené la arquitectura de la app.</p>
             </div>
             <div class="nz-main">
               <p class="nz-sub">Del dolor a la función</p>
@@ -1358,8 +1374,8 @@
             <div class="nz-text">
               <span class="nz-num">04 · Validación</span>
               <h3>Test de usabilidad con 15 personas</h3>
-              <p>Prototipo probado en Maze con tres tareas clave: onboarding, búsqueda de eventos y creación de grupo.</p>
-              <p class="nz-win">Todas completaron las tareas y nadie abandonó ningún flujo. Mejora detectada: la precisión de clic en algunos pasos.</p>
+              <p>Probé el prototipo en Maze con tres tareas clave: onboarding, búsqueda de eventos y creación de grupo.</p>
+              <p class="nz-win">Todas las personas completaron las tareas y nadie abandonó ningún flujo. Punto de mejora detectado: la precisión de clic en algunos pasos.</p>
               <p class="pmx-link"><a class="case-link" href="https://app.maze.co/report/PalME/4f757mkekyd7d/intro" target="_blank" rel="noopener">Ver informe en Maze ↗</a></p>
             </div>
             <figure class="nz-fig">
@@ -1376,7 +1392,7 @@
             <div class="nz-text nz-aside">
               <span class="nz-num">05 · UI</span>
               <h3>Una identidad con la energía de un directo</h3>
-              <p><strong>Pal</strong> (colega de confianza) + <strong>Me</strong> (find me). Estrategia color-first: casi sin imágenes, el color y la tipografía transmiten la emoción del evento.</p>
+              <p><strong>Pal</strong> (colega de confianza) + <strong>Me</strong> («encuéntrame»). Estrategia color-first: casi sin imágenes, son el color y la tipografía los que transmiten la emoción del evento.</p>
             </div>
             <div class="nz-main">
               <p class="nz-sub">Color</p>
@@ -1480,7 +1496,7 @@
           <header class="nz-head">
             <p class="nz-eyebrow">UX/UI · Web responsive · Framer</p>
             <h2 class="nz-title">LUMOSIA: la web de lanzamiento de unas gafas inteligentes</h2>
-            <p class="nz-lead">Inventamos un producto, unas gafas inteligentes de gama alta que se controlan desde una app, y diseñamos su landing y su app. Después lo convertimos en un prototipo responsive en Framer y, como segunda iteración, rediseñé la landing para hacerla más clara y completa.</p>
+            <p class="nz-lead">Inventamos un producto (unas gafas inteligentes de gama alta que se controlan desde una app) y diseñamos su landing y su app. Después lo convertimos en un prototipo responsive en Framer y, en una segunda iteración, rediseñé la landing para hacerla más clara y completa.</p>
             <dl class="nz-meta">
               <div><dt>Rol</dt><dd>Diseño UX/UI y prototipado</dd></div>
               <div><dt>Contexto</dt><dd>Proyecto académico en equipo</dd></div>
@@ -1500,7 +1516,7 @@
               <span class="nz-num">01 · Reto</span>
               <h3>Vender un producto que todavía no existe</h3>
               <p>Nadie conoce LUMOSIA. La web tenía que explicar en segundos qué hacen las gafas y transmitir lujo y tecnología a la vez.</p>
-              <p class="nz-win">Ordenamos la página según las preguntas que se hace el visitante, una sección por pregunta.</p>
+              <p class="nz-win">Ordenamos la página según las preguntas que se hace el visitante: una sección por pregunta.</p>
             </div>
             <figure class="nz-fig">
               <figcaption>Arquitectura de la landing</figcaption>
@@ -1519,8 +1535,8 @@
           <section class="nz-sec nz-sec--long">
             <div class="nz-text nz-aside">
               <span class="nz-num">02 · Sistema visual</span>
-              <h3>Lujo de vitrina, no gadget</h3>
-              <p>Fondo negro para que el producto y las cifras destaquen como en un escaparate, y un acento cálido champán en lugar del azul típico de la tecnología.</p>
+              <h3>Lujo de escaparate, no un gadget más</h3>
+              <p>Un fondo negro hace que el producto y las cifras destaquen como en un escaparate, y un acento cálido color champán sustituye al azul típico de la tecnología.</p>
             </div>
             <div class="nz-main">
               <p class="nz-sub">Color</p>
@@ -1564,8 +1580,8 @@
             <div class="nz-text nz-aside">
               <span class="nz-num">04 · Iteración 2</span>
               <h3>Rediseño: más claro y más completo</h3>
-              <p>Revisé el primer prototipo con ojos de usuario y detecté lo que frenaba la decisión de compra. Rediseñé la landing completa en escritorio y móvil.</p>
-              <p class="nz-win">De una web de presentación a una página que explica, convence y lleva a reservar.</p>
+              <p>Revisé el primer prototipo desde el punto de vista del usuario y detecté lo que frenaba la decisión de compra. Después rediseñé la landing completa para escritorio y móvil.</p>
+              <p class="nz-win">La web pasa de solo presentar el producto a explicarlo, convencer y llevar a la reserva.</p>
             </div>
             <div class="nz-main">
               <p class="nz-sub">Antes y después</p>
@@ -1668,7 +1684,7 @@
             <div class="nz-text">
               <span class="nz-num">02 · SEM</span>
               <h3>Aparecer justo cuando alguien busca</h3>
-              <p>Anuncios en Google con 10 € al día para quien ya busca streetwear o upcycling, e incluso marcas parecidas, para presentarse como alternativa artesanal.</p>
+              <p>Anuncios en Google, con 10 € al día, dirigidos a quien ya busca streetwear, upcycling o incluso marcas similares, para presentar NOIZZZ como alternativa artesanal.</p>
               <p class="nz-win">Google valoró el anuncio como «Excelente» (90,7 %), lo que abarata cada clic.</p>
             </div>
             <figure class="nz-fig">
@@ -2174,7 +2190,7 @@
     document.getElementById("dpCta").addEventListener("click", reveal);
     document.getElementById("dpClose").addEventListener("click", close);
     document.getElementById("dpContact").addEventListener("click", function () { close(); openWindow("contact"); });
-    ad.addEventListener("click", function (e) { if (e.target === ad) { if (!front.hidden) reveal(); else close(); } });
+    
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !ad.hidden) { if (!front.hidden) reveal(); else close(); } });
     if (location.hash === "#anuncio") setTimeout(show, 800);
     else if (!seen) setTimeout(show, 120000);
