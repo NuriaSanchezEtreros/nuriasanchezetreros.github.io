@@ -1,6 +1,7 @@
 <!doctype html><html lang="es"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<link rel="icon" type="image/png" sizes="64x64" href="assets/9bd8e6efbb63.webp">
-<link rel="apple-touch-icon" href="assets/9730fe60848c.webp">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <meta name="description" content="Portfolio de Nuria Sánchez Etreros, diseñadora UX/UI junior con formación en marketing digital. Casos de estudio de app, web responsive y estrategia digital.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nuriasanchezetreros.github.io/">
@@ -866,6 +867,28 @@
   #win-contact .cv-download-btn { margin-top:22px; padding:12px 20px; gap:10px; }
   .cv-page p, .cv-page li { text-align:justify; hyphens:auto; -webkit-hyphens:auto; }
   .cv-page .cv-name, .cv-page .cv-role, .cv-page .cv-contact { text-align:left; }
+  .os-window img { transition:opacity .25s ease; }
+
+  /* ===== CV nuevo dentro del portfolio ===== */
+  .cv-page.cvx { padding:0; overflow:hidden; font-family:Carlito,"Calibri","Segoe UI",var(--font); font-size:.86rem; line-height:1.45; color:#1E2420; background:#fff; }
+  .cvx p, .cvx li { color:#1E2420; font-size:.86rem; line-height:1.45; margin:0 0 4px; text-align:justify; hyphens:none; }
+  .cvx .cvx-top { background:#F6EEF1; padding:26px 30px 16px; border-bottom:3px solid #C8336E; }
+  .cvx .cvx-main { padding:6px 30px 22px; }
+  .cvx h1 { font-family:"Poppins",var(--font); font-weight:600; font-size:1.7rem; line-height:1.1; color:#24453A; margin:0; letter-spacing:-.01em; }
+  .cvx .role { font-family:"Poppins",var(--font); font-weight:500; font-size:.98rem; color:#C8336E; margin:4px 0 8px; text-align:left; }
+  .cvx .contact { font-size:.78rem; color:#4A514C; text-align:left; margin:0; }
+  .cvx .contact b { color:#24453A; }
+  .cvx h2 { font-family:"Poppins",var(--font); font-size:.78rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:#24453A; margin:16px 0 7px; padding:0 0 0 9px; border:none; border-left:4px solid #C8336E; line-height:1.2; }
+  .cvx h3 { font-family:"Poppins",var(--font); font-size:.84rem; font-weight:600; margin:10px 0 3px; color:#1E2420; display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .cvx h3 em { font-style:normal; color:#C8336E; }
+  .cvx h3 .d { font-family:Carlito,var(--font); font-weight:400; font-size:.74rem; color:#4A514C; }
+  .cvx ul { margin:2px 0 5px; padding-left:16px; }
+  .cvx li::marker { color:#C8336E; }
+  .cvx strong { color:#C8336E; }
+  .cvx .sk b { color:#24453A; }
+  .cvx .edu li { text-align:left; }
+  .cv-dl { margin-top:0; padding:16px 0 4px; border-top:none; }
+  @media (max-width:520px) { .cvx .cvx-top { padding:20px 18px 14px; } .cvx .cvx-main { padding:4px 18px 18px; } .cvx p, .cvx li { text-align:left; } }
 </style>
 
 <div class="desktop" id="desktop">
@@ -1145,58 +1168,53 @@
       </div>
       <div class="win-body cv-viewer-body">
         <div class="cv-page-scroll">
-          <div class="cv-page">
-            <p class="cv-name">Nuria Sánchez Etreros</p>
-            <p class="cv-role">Diseño UX/UI</p>
-            <p class="cv-contact">Madrid, España &middot; +34 633 163 463 &middot; nuria.sanchez.etreros@gmail.com</p>
-            <hr class="cv-hr">
-            <h2>Perfil profesional</h2>
-            <p>Diseñadora UX/UI Junior con formación en Diseño (Universidad Complutense de Madrid) y especialización en UX/UI y Marketing Digital (CEI). Transformo problemas complejos en soluciones visuales funcionales, accesibles y atractivas, apoyándome en mis conocimientos de teoría del color, tipografía y composición. Manejo fluido de Figma y experiencia documentando flujos y sistemas de diseño. Aplico normas básicas de accesibilidad para que las interfaces lleguen a usuarios con problemas de visión, lectura u otras necesidades. Busco aportar creatividad y visión estratégica en un equipo dinámico donde seguir creciendo.</p>
+          <div class="cv-page cvx">
 
-            <h2>Experiencia y proyectos</h2>
-            <h3>Diseño UX/UI</h3>
-            <p class="cv-block-sub">Wireframes, prototipado y arquitectura de información</p>
-            <ul>
-              <li>Creación de wireframes y prototipos de alta fidelidad para web y móvil en Figma</li>
-              <li>Auditorías heurísticas y arquitectura de información para optimizar la navegación</li>
-              <li>Aplicación de normas básicas de accesibilidad (contraste, legibilidad, navegación por teclado) en el diseño de interfaces</li>
-            </ul>
-            <h3>Sistemas de diseño y documentación</h3>
-            <p class="cv-block-sub">Consistencia visual y procesos</p>
-            <ul>
-              <li>Creación y mantenimiento de componentes y sistemas de diseño para asegurar consistencia visual</li>
-              <li>Gestión de flujos de usuario y documentación de procesos con FigJam y Notion</li>
-              <li>Testeo de usabilidad y recogida de feedback para iterar sobre los diseños</li>
-            </ul>
-            <h3>Estrategia digital</h3>
-            <p class="cv-block-sub">Puente entre diseño y negocio</p>
-            <ul>
-              <li>Aplicación de principios de marketing y ventas para mejorar la conversión y la experiencia de usuario</li>
-            </ul>
+<div class="cvx-top"><h1>Nuria Sánchez Etreros</h1>
+<p class="role">Diseñadora UX/UI Junior</p>
+<p class="contact">Madrid, España | +34 633 163 463 | nuria.sanchez.etreros@gmail.com<br><b>Portfolio:</b> nuriasanchezetreros.github.io | <b>LinkedIn:</b> linkedin.com/in/nuria-sánchez-etreros</p></div>
+<div class="cvx-main">
 
-            <h2>Uso de inteligencia artificial</h2>
-            <ul>
-              <li>Uso de herramientas de IA (ChatGPT, Claude, NotebookLM) para agilizar procesos de trabajo, como el análisis de resultados de tests de usuario o encuestas con muchas respuestas, resumir contenido y extraer los datos más relevantes</li>
-            </ul>
+<h2>Perfil profesional</h2>
+<p>Diseñadora UX/UI Junior con formación en Diseño (Universidad Complutense de Madrid) y Másteres en Diseño UX/UI y Marketing Digital (CEI). Transformo problemas complejos en soluciones visuales funcionales, accesibles y atractivas, apoyándome en investigación con usuarios, teoría del color, tipografía y composición. Manejo avanzado de Figma, experiencia en prototipado, sistemas de diseño y test de usabilidad, y visión de negocio gracias a mi formación en marketing digital. Persona resolutiva, que aprende rápido y saca los proyectos adelante pese a los imprevistos.</p>
 
-            <h2>Formación</h2>
-            <ul>
-              <li>Máster en Diseño UX/UI — CEI (2025–2026)</li>
-              <li>Máster en Marketing Digital — CEI (2025–2026)</li>
-              <li>Grado en Diseño — Universidad Complutense de Madrid (2021–2025)</li>
-            </ul>
+<h2>Proyectos</h2>
+<h3><span class="t"><em>PalMe</em> · App móvil para ir acompañado a eventos</span> <span class="d">2026 · Proyecto final Máster UX/UI, CEI</span></h3>
+<ul>
+<li>Diseño UX/UI end-to-end con Design Thinking: desk research, benchmarking, cuestionario (<strong>50+ respuestas</strong>), entrevistas, user personas, customer journey y priorización MoSCoW.</li>
+<li>Arquitectura de información, flowcharts, wireframes, UI Kit con Atomic Design y prototipo de alta fidelidad en Figma.</li>
+<li>Test de usabilidad en Maze con <strong>15 usuarios</strong>: <strong>100 % de tareas completadas</strong> y <strong>0 % de abandono</strong>. Contraste <strong>AAA (10,03:1)</strong> en las llamadas a la acción.</li>
+</ul>
+<h3><span class="t"><em>LUMOSIA</em> · Landing web responsive</span> <span class="d">2026 · Proyecto en equipo</span></h3>
+<ul>
+<li>Diseño de la landing y la app de un producto ficticio (gafas inteligentes) y prototipo responsive para escritorio, tablet y móvil en Framer.</li>
+<li>Segunda iteración: rediseño de la jerarquía, la llamada a la acción y la sección de precios para mejorar la claridad y la conversión.</li>
+</ul>
+<h3><span class="t"><em>NOIZZZ</em> · Estrategia de marketing digital 360°</span> <span class="d">2026 · TFM Máster Marketing Digital, CEI</span></h3>
+<ul>
+<li>Plan de lanzamiento de una marca de moda: keyword research, SEO on-page y off-page en WordPress con Yoast (<strong>100/100 en SEO</strong> en PageSpeed Insights) y campañas en Google Ads, Meta Ads y TikTok Ads.</li>
+<li>Medición con Google Analytics 4 y Tag Manager, buyer personas y email marketing con Mailchimp.</li>
+</ul>
 
-            <h2>Habilidades y herramientas</h2>
-            <p class="cv-skill"><b>Diseño UX/UI:</b> Wireframes, prototipado interactivo, arquitectura de información, sistemas de diseño, testeo de usabilidad, accesibilidad</p>
-            <p class="cv-skill"><b>Herramientas:</b> Figma (avanzado), FigJam, Adobe Suite, Framer, Notion, Maze, Whimsical</p>
-            <p class="cv-skill"><b>Marketing digital:</b> Estrategia de ventas, optimización de conversión (CRO), Google Analytics</p>
-            <p class="cv-skill"><b>Tecnología:</b> HTML/CSS básico, metodologías ágiles</p>
-            <p class="cv-skill"><b>Productividad e IA:</b> ChatGPT, Claude, NotebookLM</p>
+<h2>Formación</h2>
+<ul class="edu">
+<li>Máster en Diseño UX/UI. CEI, Madrid (2025–2026)</li>
+<li>Máster en Marketing Digital. CEI, Madrid (2025–2026)</li>
+<li>Grado en Diseño. Universidad Complutense de Madrid (2021–2025)</li>
+</ul>
 
-            <h2>Idiomas</h2>
-            <p>Español nativo &middot; Inglés B2</p>
+<h2>Habilidades</h2>
+<p class="sk"><b>UX:</b> investigación de usuarios, entrevistas, user personas, customer journey, arquitectura de información, flowcharts, auditoría heurística, test de usabilidad, accesibilidad (WCAG).</p>
+<p class="sk"><b>UI:</b> wireframes, prototipado interactivo de alta fidelidad, diseño responsive, sistemas de diseño, UI Kit, Atomic Design, tipografía y color.</p>
+<p class="sk"><b>Herramientas:</b> Figma (avanzado), FigJam, Framer, Maze, Adobe Creative Suite, Whimsical, Notion, WordPress.</p>
+<p class="sk"><b>Marketing digital:</b> SEO, SEM, Google Ads, Meta Ads, Google Analytics 4, optimización de la conversión (CRO), email marketing.</p>
+<p class="sk"><b>Otros:</b> HTML y CSS básico, metodologías ágiles, IA generativa (ChatGPT, Claude, NotebookLM) para síntesis de investigación y análisis de datos.</p>
+
+<h2>Idiomas</h2>
+<p>Español: nativo. Inglés: B2.</p>
+</div>
             <div class="cv-dl">
-              <a class="cv-download-btn" id="cvDownloadBtn" href="assets/CV_Nuria_Sanchez_Etreros.pdf" download="CV_Nuria_Sanchez_Etreros.pdf">
+              <a class="cv-download-btn" id="cvDownloadBtn" href="assets/CV_Nuria_Sanchez_Etreros.pdf?v=3" download="CV_Nuria_Sanchez_Etreros.pdf">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Descargar CV en PDF
               </a>
@@ -2242,6 +2260,33 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !ad.hidden) { if (!front.hidden) reveal(); else close(); } });
     if (location.hash === "#anuncio") setTimeout(show, 800);
     else if (!seen) setTimeout(show, 120000);
+  })();
+
+  /* ---------------- precarga en segundo plano: las ventanas se abren con las imágenes ya listas ---------------- */
+  (function () {
+    var done = {};
+    function warm(url) { if (!url || done[url] || url.indexOf("assets/") !== 0) return; done[url] = 1; var im = new Image(); im.decoding = "async"; im.src = url; }
+    function warmWindow(id) {
+      var w = document.getElementById("win-" + id); if (!w) return;
+      w.querySelectorAll("img").forEach(function (i) { warm(i.getAttribute("src")); });
+    }
+    /* al pasar el ratón o tocar una carpeta, se precarga su contenido al momento */
+    document.querySelectorAll("[data-open]").forEach(function (el) {
+      var id = el.getAttribute("data-open");
+      el.addEventListener("pointerenter", function () { warmWindow(id); });
+      el.addEventListener("pointerdown", function () { warmWindow(id); });
+    });
+    /* después de cargar el escritorio, se descarga todo poco a poco sin bloquear nada */
+    window.addEventListener("load", function () {
+      var order = ["proyecto-1", "proyecto-2", "proyecto-3", "gallery", "about", "cv"];
+      var urls = [];
+      order.forEach(function (id) { var w = document.getElementById("win-" + id); if (w) w.querySelectorAll("img").forEach(function (i) { urls.push(i.getAttribute("src")); }); });
+      var k = 0;
+      (function next() {
+        for (var n = 0; n < 4 && k < urls.length; n++, k++) warm(urls[k]);
+        if (k < urls.length) setTimeout(next, 120);
+      })();
+    });
   })();
   /* ---------------- case study tabs + lightbox ---------------- */
   document.querySelectorAll(".case-tabs").forEach(function (bar) {
