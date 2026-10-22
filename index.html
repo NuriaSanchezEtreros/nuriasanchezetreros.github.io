@@ -894,6 +894,10 @@
   .cvx .sk b { color:#24453A; }
   .cvx .edu li { text-align:left; }
   .cv-dl { margin-top:0; padding:16px 0 4px; border-top:none; }
+  .cv-page.cvx .cv-dl { margin:10px 0 0; padding:22px 16px 28px; border-top:1px solid #EBDDE3; background:#F6EEF1; }
+  #win-cv .cv-dl .cv-download-btn { background:#C8336E; color:#fff; border-radius:999px; padding:12px 22px; box-shadow:0 4px 14px rgba(200,51,110,.25); }
+  #win-cv .cv-dl .cv-download-btn:hover { background:#A92A5C; }
+  @media (max-width:520px) { .cv-page.cvx .cv-dl { padding:18px 12px 22px; } }
   @media (max-width:520px) { .cvx .cvx-top { padding:20px 18px 14px; } .cvx .cvx-main { padding:4px 18px 18px; } .cvx p, .cvx li { text-align:left; } }
 </style>
 
@@ -2367,6 +2371,12 @@
     return out;
   }
   var savedBlocks = [], savedText = [], savedAttr = [], current = "es";
+  var enHref = "assets/CV_Nuria_Sanchez_Etreros_EN.pdf?v=2";
+  if (location.protocol.indexOf("http") === 0 && window.fetch) {
+    fetch("assets/CV_Nuria_Sanchez_Etreros_EN.pdf", { method: "HEAD" }).then(function (r) {
+      if (!r.ok) { enHref = "CV_Nuria_Sanchez_Etreros_EN.pdf?v=2"; var c = document.getElementById("cvDownloadBtn"); if (c && current === "en") c.setAttribute("href", enHref); }
+    }).catch(function () {});
+  }
   var ES_TITLE = document.title;
   function toEN() {
     blocks().forEach(function (el) { var k = el.innerHTML.replace(/\s+/g, " ").trim(); var v = EN_BLOCK[k]; if (v) { savedBlocks.push([el, el.innerHTML]); el.innerHTML = v; } });
@@ -2389,7 +2399,7 @@
     current = lang; window.__lang = lang;
     document.documentElement.lang = lang;
     var cv = document.getElementById("cvDownloadBtn");
-    if (cv) { cv.setAttribute("href", lang === "en" ? "assets/CV_Nuria_Sanchez_Etreros_EN.pdf?v=1" : "assets/CV_Nuria_Sanchez_Etreros.pdf?v=3"); cv.setAttribute("download", lang === "en" ? "CV_Nuria_Sanchez_Etreros_EN.pdf" : "CV_Nuria_Sanchez_Etreros.pdf"); }
+    if (cv) { cv.setAttribute("href", lang === "en" ? enHref : "assets/CV_Nuria_Sanchez_Etreros.pdf?v=3"); cv.setAttribute("download", lang === "en" ? "CV_Nuria_Sanchez_Etreros_EN.pdf" : "CV_Nuria_Sanchez_Etreros.pdf"); }
     if (save) { try { localStorage.setItem("ns-lang", lang); } catch (e) {} }
     if (window.__tick) { try { window.__tick(); } catch (e) {} }
     syncUI();
